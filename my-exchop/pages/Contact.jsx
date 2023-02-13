@@ -1,35 +1,43 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
+import './index.css'
+
 
 const Contact = () => {
-    const handleSubmit = (event) =>{
-        
-    }
+  const handleSubmit = (event) => {
+
+  }
   return (
-    
-    <div className='flex justify-center items-center bg-[#2B201E] w-screen h-screen '>
-      <div className='flex justify-center w-[25%] group'>
-        <div className='absolute bg-gradient-to-r from-[#7a4f35] to-[#91442d] md:w-[25%] md:h-[55%] sm:w-[75%] 
-        sm:h-[50%] rounded-lg blur opacity-75 group-hover:opacity-100 transition
-        duration-1000 group-hover:duration-200'></div>
-            <form onSubmit={handleSubmit} className=" flex relative justify-center  
-        bg-[#9d746d] md:w-full md:h-[390px] sm:w-[75%] sm:h-[331px] 
-         rounded-lg  flex-col gap-2">
-                <Link to='/'><h1 className='ml-2  underline'>Back</h1></Link>
-                <h1 className='pb-2 text-xl text-center text-[#332522] underline '>CONTACT US</h1>
-                <label htmlFor="email" className=' text-md  ml-6 text-[#332522]'>Email : </label>
-                <input type="email" name="email" id="email"  className='focus:ring-stone-800
-                 rounded-lg bg-[#5d4945]  text-[14px] text-zinc-800 border-none
-                 outline-none font-serif placeholder:text-center w-[75%] ml-5 '/>
-                <label htmlFor="message" className='text-md ml-6 my-2 text-[#332522]'>Write Your Message :</label>
-                <textarea name="message" id="message" cols="20" rows="3" className=' font-serif text-thin
-                  mx-5 w-[87%] rounded-lg border-none bg-[#5d4945] 
-                  focus:border-none focus:ring-stone-800 text-zinc-800
-                '></textarea>
-                <button type='submit' className='mt-3 bg-[#2B201E] w-[50%] mx-24 h-10 rounded-lg text-[#9d746d]
-                 hover:bg-[#473532] transition duration-1000'>SEND !</button>
-            </form>
+    <div className='relative bg-gradient-to-br from-slate-700 to-slate-800 
+    h-screen font-serif overflow-hidden'>
+      <Link to='/'><h1 className=''>Back</h1></Link>
+      <div className="absolute animate-blob bg-gradient-to-br from-slate-700 to-slate-800  blur-sm w-60 h-60 rounded-full cercle-left"></div>
+      <div className="absolute animate-blob bg-gradient-to-br from-slate-700 to-slate-800  blur-sm w-40 h-40 rounded-full cercle-right"></div>
+      <div className='flex justify-center items-center h-full w-full'>
+        <form action="" onSubmit={handleSubmit}
+          className='flex w-1/2 h-1/2 backdrop-blur-sm  rounded-xl bg-slate-500/30 '>
+          <img className='w-[60px] h-[60px] absolute top-8 left-16 opacity-50' src="../assets/mail.png" alt="email" />
+
+          <h1 className='absolute top-20 left-40 text-2xl text-slate-300 font-bold'>Send Us A Message !!</h1>
+          <input className='text-slate-900 h-12 mt-32 ml-40 rounded-lg bg-transparent w-1/2 focus:outline-slate-300'
+            type="email"
+            name=""
+            id=""
+            placeholder='Enter your Email...' />
+
+          <textarea
+            className='text-slate-900 resize-none h-1/3 w-1/2 rounded-lg  absolute top-48 left-40 bg-transparent'
+            name=""
+            id=""
+            cols="30"
+            rows="2"
+            placeholder='Enter your Message...'></textarea>
+          <button className='scale-in-center 
+          hover:bg-slate-900 transition duration-500 absolute bg-slate-800 h-12 w-32 right-20 bottom-12 rounded-lg text-slate-300 font-bold' type="submit">Send</button>
+
+        </form>
       </div>
+
     </div>
   )
 }
