@@ -22,7 +22,7 @@ const Contact = () => {
       });
   };
   return (
-    <div className='relative bg-gradient-to-br from-slate-700 to-slate-800 
+    <div className='relative bg-gradient-to-br from-slate-600 to-slate-800 
     h-screen font-serif overflow-hidden'>
       <Link to='/'><h1 className='text-slate-300 font-semibold absolute sm:top-4 sm:left-4 underline underline-offset-[3px] md:text-lg md:top-4'>Back</h1></Link>
 
@@ -34,11 +34,11 @@ const Contact = () => {
 
         {/*Form shit starts here*/}
         <form ref={form} onSubmit={sendEmail}
-          className='flex md:w-1/2 md:h-1/2 sm:w-[450px] sm:h-[300px] backdrop-blur-sm  rounded-xl bg-slate-500/30 '>
-          <img className='w-[60px] h-[60px] absolute md:top-8 md:left-16 sm:top-6 sm:left-4 opacity-50' src="../assets/mail.png" alt="email" />
+          className='hover:shadow-xl hover:shadow-slate-800/30 transition duration-500 md:w-1/2 md:h-1/2 sm:w-[450px] sm:h-[300px] backdrop-blur-sm  rounded-xl bg-slate-500/30 '>
+          <img className=' w-[60px] h-[60px] absolute md:top-8 md:left-16 sm:top-6 sm:left-4 opacity-50' src="../assets/mail.png" alt="email" />
 
           <h1 className='absolute md:top-20 md:left-40 sm:top-20 sm:left-20 md:text-2xl sm:text-xl text-slate-300 font-bold'>Send Us A Message !!</h1>
-          <input className='absolute text-slate-900 h-12 md:top-32 md:left-40 sm:top-28 sm:left-20 rounded-lg bg-transparent w-1/2 focus:outline-slate-300'
+          <input className='absolute outline-none text-slate-900 h-12 md:top-32 md:left-40 sm:top-28 sm:left-20 rounded-lg bg-transparent w-1/2'
             type="email"
             name="user_email"
             id="email"
