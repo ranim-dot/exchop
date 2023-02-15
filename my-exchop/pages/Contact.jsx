@@ -22,12 +22,12 @@ const Contact = () => {
       });
   };
   return (
-    <div className='relative bg-gradient-to-br from-slate-600 to-slate-800 
+    <div className='relative bg-gradient-to-br from-slate-600 to-slate-700 
     h-screen font-serif overflow-hidden'>
       <Link to='/'><h1 className='text-slate-300 font-semibold absolute sm:top-4 sm:left-4 underline underline-offset-[3px] md:text-lg md:top-4'>Back</h1></Link>
 
       {/*Background Design starts here */}
-      <div className="absolute animate-blob bg-gradient-to-br from-slate-700 to-slate-800  blur-sm w-60 h-60 rounded-full cercle-left"></div>
+      <div className="absolute animate-blob bg-gradient-to-br from-slate-700 to-slate-800  blur-sm w-60 h-60 rounded-full sm:left-[60px] cercle-left"></div>
       <div className="absolute animate-blob bg-gradient-to-br from-slate-700 to-slate-800  blur-sm w-40 h-40 rounded-full cercle-right"></div>
       <div className='flex justify-center items-center h-full w-full'>
 
