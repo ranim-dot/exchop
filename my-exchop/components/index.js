@@ -1,0 +1,5 @@
+export {default as Dashboard} from './Dashboard.jsx'
+export {default as NavBar} from './NavBar.jsx'
+export {default as Searchbar} from './Searchbar.jsx'
+export {default as Profile} from './Profile.jsx'
+export {default as Cart} from './Cart.jsx'
