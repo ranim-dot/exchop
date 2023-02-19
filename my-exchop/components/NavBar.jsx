@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import { Cart, Profile, Searchbar,MyProducts } from './index'
+import { Exchange, Profile, Searchbar } from './index'
 import { Link } from "react-router-dom";
 
 const NavBar = () => {
@@ -15,7 +15,7 @@ const NavBar = () => {
             </ul>
             <div className='flex gap-8 items-center justify-center '>
             <Searchbar  />
-            <Cart />
+            <Exchange />
             <Profile />
             </div>
             

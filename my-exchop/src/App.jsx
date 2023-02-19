@@ -1,6 +1,6 @@
 import React from 'react'
 import {Welcome , Signin , Signup, Contact} from "../pages/index";
-import {Dashboard,Profile,Cart,MyProducts} from '../components/index'
+import {Dashboard,Profile,Exchange,MyProducts} from '../components/index'
 import { Route, Routes } from 'react-router-dom'
 
 const App = () => {
@@ -14,7 +14,7 @@ const App = () => {
             <Route path='/dashboard' element={<Dashboard />} />
             <Route path='/myProducts' element={<MyProducts />} />
             <Route path='/profile' element={<Profile />} />
-            <Route path='/cart' element={<Cart />} />
+            <Route path='/exchange' element={<Exchange />} />
         </Routes>
     </div>
   )
