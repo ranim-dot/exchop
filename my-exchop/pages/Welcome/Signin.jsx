@@ -34,4 +34,4 @@ const Signin = ({ on }) => {
   )
 }
 
-export default Signin
+export default Signin;

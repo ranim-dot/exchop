@@ -11,9 +11,7 @@ import {Signin,Signup} from '../index'
 
 const Welcome = () => {
 
-  function handleToggle() {
-    setToggle(prev => !prev)
-  }
+ 
 
   function handleEnter() {
     const element = document.getElementById('section');
@@ -24,15 +22,20 @@ const Welcome = () => {
   };
 
   const [toggle, setToggle] = useState(true)
+  function handleToggle() {
+    setTimeout(() => {
+      setToggle(prev => !prev)
+    },100)
+  }
 
   return (
     <>
       {/*Welcome Section Starts here  */}
 
-      <div className='relative bg-gradient-to-br from-slate-600 to-slate-700 
+      <div className=' relative bg-gradient-to-br from-slate-500 to-slate-600 
        h-screen font-serif '>
-        <div className="absolute animate-blob bg-gradient-to-br from-slate-600 to-slate-800  blur-sm w-60 h-60 rounded-full sm:left-[90px] cercle-left"></div>
-        <div className="absolute animate-blob bg-gradient-to-br from-slate-600 to-slate-800  blur-sm w-40 h-40 rounded-full cercle-right"></div>
+        <div className="absolute animate-blob bg-gradient-to-br from-slate-600 to-slate-700  blur-sm w-60 h-60 rounded-full sm:left-[90px] cercle-left"></div>
+        <div className="absolute animate-blob bg-gradient-to-br from-slate-600 to-slate-700  blur-sm w-40 h-40 rounded-full cercle-right"></div>
         <div className='flex justify-between'>
           <h4 className='lg:text-2xl pl-4 pt-3 sm:text-lg font-sans text-slate-300'>Exchop</h4>
           <Link to="/contact"><h4 className='md:text-lg pr-4 pt-4 sm:text-sm text-slate-300 font-serif font-semibold'>CONTACT US</h4></Link>
@@ -61,7 +64,7 @@ const Welcome = () => {
       <div className='flex justify-center items-center h-[100vh] bg-gradient-to-br from-slate-300 to-slate-400' id='section'>
         <div className='bg-slate-100 md:h-[400px] md:w-[750px] sm:h-[300px] sm:w-[350px] rounded-xl shadow-lg'>
 
-          {toggle ? <Signin on={handleToggle} /> : <Signup on={handleToggle}/>}
+          {toggle ? <Signin toggle={toggle}  on={handleToggle} /> : <Signup toggle={toggle}   on={handleToggle}/>}
 
         </div>
       </div>

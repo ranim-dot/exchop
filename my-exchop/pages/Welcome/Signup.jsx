@@ -1,12 +1,13 @@
 import React from 'react'
 
-const Signup = ({ on }) => {
+const Signup = ({ on , toggle}) => {
   return (
     <div className=' flex w-full h-full'>
 
       {/* Card to switch toggle */}
 
-      <div className='flex justify-center flex-col items-center gap-16  w-1/2 bg-slate-700 rounded-lg'>
+      <div id='card-2' className='
+      flex justify-center flex-col items-center gap-16  w-1/2 bg-slate-700 rounded-lg'>
         <h1 className='text-2xl text-white'>Welcome Back, friend</h1>
         <p className='text-white w-[250px] text-center'>Lorem, ipsum dolor sit amet consectetur adipisic elit.</p>
         <button onClick={on} className='text-white rounded-lg w-20 h-10 bg-slate-500 transition duration-300 hover:bg-slate-600' >Sign In</button>

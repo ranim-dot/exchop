@@ -4,8 +4,10 @@ const Searchbar = ({search}) => {
   const [toggleSearch, setToggleSearch] = useState(false)
 
   function handleSearch() {
-    setToggleSearch(prev => !prev)
-    console.log(toggleSearch)
+    setTimeout(() => {
+      setToggleSearch(prev => !prev)
+    },100)
+    
   }
 
   return (
